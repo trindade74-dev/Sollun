@@ -1,0 +1,23 @@
+/* ============================================================
+   Extensão da malha pontilhada do hero (far + mid, mesmos valores de
+   HeroBackground.module.css) até a seção Powered by. Aplicado direto como
+   background no wrapper — sem elementos extra, sem position:absolute — pra
+   não interferir no `position: sticky` do carrossel (overflow-hidden num
+   ancestral quebraria o sticky). Camada "near" (ember) e glow/anéis ficam
+   exclusivos do hero, não repetidos aqui.
+   ============================================================ */
+
+.extendedMesh {
+  background-image:
+    radial-gradient(circle, rgba(217, 117, 67, 0.28) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(125, 211, 216, 0.18) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(235, 201, 160, 0.14) 1px, transparent 1px);
+  background-size:
+    120px 120px,
+    64px 64px,
+    32px 32px;
+  background-position:
+    60px 20px,
+    -16px 40px,
+    0 0;
+}

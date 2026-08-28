@@ -1,0 +1,66 @@
+# 🔐 Environment & Credentials
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+*.key
+*.pem
+
+# 🛡️ Sensitive folders
+Credentials-n8n/
+Docker/.env*
+Variáveis de ambiente/
+
+# 📦 Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 🏗️ Build outputs
+dist/
+build/
+.next/
+out/
+
+# 🛠️ Development
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.env.*.local
+.cache/
+
+# 📝 Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 🔧 IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# 🎯 OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# 📁 Local folders
+.claude/
+.agents/
+local_env/
+test_files/
+
+# 🚀 Specific to Sollun
+sollun-animation/node_modules/
+sollun-animation/dist/
+Pagina/node_modules/
+Pagina/dist/

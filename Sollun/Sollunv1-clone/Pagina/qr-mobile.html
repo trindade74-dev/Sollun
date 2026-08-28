@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code — Sollun Mobile</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0a14;
+      color: #f4efe9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      gap: 24px;
+    }
+    .container {
+      text-align: center;
+      max-width: 500px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    p {
+      color: #8a85a0;
+      margin-bottom: 24px;
+      font-size: 1rem;
+    }
+    .qr-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
+      margin: 24px 0;
+    }
+    .qr-box img {
+      width: 280px;
+      height: 280px;
+    }
+    .link-section {
+      margin-top: 32px;
+      padding: 20px;
+      background: rgba(217, 117, 67, 0.1);
+      border-radius: 12px;
+      border: 1px solid rgba(217, 117, 67, 0.3);
+    }
+    .link-label {
+      font-size: 0.85rem;
+      color: #c9a878;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .link-text {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.1rem;
+      color: #d97543;
+      word-break: break-all;
+      margin-bottom: 12px;
+    }
+    .btn-copy {
+      background: #d97543;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-copy:hover {
+      background: #c55f28;
+    }
+    .tips {
+      margin-top: 32px;
+      padding: 20px;
+      background: rgba(125, 211, 216, 0.1);
+      border-radius: 12px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .tips h3 {
+      margin-bottom: 12px;
+      color: #7dd3d8;
+    }
+    .tips li {
+      margin-left: 20px;
+      margin-bottom: 8px;
+      color: #8a85a0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📱 Acesso Mobile — Sollun</h1>
+    <p>Escaneie o QR Code ou acesse o link abaixo no seu mobile</p>
+
+    <div class="qr-box">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=http%3A%2F%2F172.28.32.1%3A5173" alt="QR Code para http://172.28.32.1:5173" />
+    </div>
+
+    <div class="link-section">
+      <div class="link-label">Acesse este link no mobile:</div>
+      <div class="link-text">http://172.28.32.1:5173</div>
+      <button class="btn-copy" onclick="copyToClipboard('http://172.28.32.1:5173')">
+        📋 Copiar link
+      </button>
+    </div>
+
+    <div class="tips">
+      <h3>⚡ Dicas:</h3>
+      <ul>
+        <li>✅ Mobile e PC devem estar na mesma Wi-Fi</li>
+        <li>✅ Servidor deve estar rodando: <code>npm run dev</code></li>
+        <li>✅ Teste em Chrome ou Safari</li>
+        <li>✅ Se não funcionar, verifique o IP correto com <code>ipconfig</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('✅ Link copiado!');
+      });
+    }
+  </script>
+</body>
+</html>

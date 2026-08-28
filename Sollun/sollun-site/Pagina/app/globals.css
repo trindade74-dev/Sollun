@@ -1,0 +1,189 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+    --font-heading: var(--font-display);
+    --font-sans: var(--font-body);
+    --font-display: var(--font-display);
+    --font-mono: var(--font-mono);
+    --color-ember: var(--ember);
+    --color-amber: var(--amber);
+    --color-sand: var(--sand);
+    --color-ion: var(--ion);
+    --color-dust: var(--dust);
+    --color-violet: var(--violet);
+    --color-bg-elev: var(--bg-elev);
+    --color-line: var(--line);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    /* ===== Desert Protocol — design tokens (Pagina/src/style.css antigo, linhas 2-21) ===== */
+    --bg: #0b0a14;
+    --bg-elev: #0f0e1f;
+    --bg-card: #131222;
+    --ember: #d97543;   /* Sol / Accent — laranja de marca */
+    --amber: #d97543;   /* alias */
+    --sand: #ebc9a0;    /* Primary */
+    --ion: #7dd3d8;     /* Lua / Signal — azul de marca */
+    --dust: #c9a878;    /* Secondary */
+    --violet: #a78bfa;  /* Plasma / Highlight */
+    --text: #f4efe9;
+    --muted-text: #8a85a0;
+    --line: rgba(235, 201, 160, 0.09);
+    --grad: linear-gradient(120deg, var(--ember) 0%, var(--sand) 50%, var(--ion) 100%);
+    --maxw: 1120px;
+
+    /* ===== Tokens semânticos do shadcn — sobrescritos com Desert Protocol (site é dark-only, sem toggle) ===== */
+    --background: var(--bg);
+    --foreground: var(--text);
+    --card: var(--bg-card);
+    --card-foreground: var(--text);
+    --popover: var(--bg-card);
+    --popover-foreground: var(--text);
+    --primary: var(--sand);
+    --primary-foreground: var(--bg);
+    --secondary: var(--bg-elev);
+    --secondary-foreground: var(--text);
+    --muted: var(--bg-elev);
+    --muted-foreground: var(--muted-text);
+    --accent: var(--bg-elev);
+    --accent-foreground: var(--text);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--ion);
+    --chart-1: var(--ember);
+    --chart-2: var(--ion);
+    --chart-3: var(--sand);
+    --chart-4: var(--dust);
+    --chart-5: var(--violet);
+    --radius: 14px;
+    --sidebar: var(--bg-elev);
+    --sidebar-foreground: var(--text);
+    --sidebar-primary: var(--sand);
+    --sidebar-primary-foreground: var(--bg);
+    --sidebar-accent: var(--bg-card);
+    --sidebar-accent-foreground: var(--text);
+    --sidebar-border: var(--line);
+    --sidebar-ring: var(--ion);
+}
+
+@utility text-grad {
+    background: var(--grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ===== Eyebrow — clonado literalmente de Pagina/src/style.css .eyebrow
+   (página antiga, via Sollunv1-clone). Colchetes decorativos via pseudo-
+   elementos, cor ion (não cinza), font-size/tracking exatos. ===== */
+@utility eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ion);
+}
+.eyebrow::before {
+    content: "[ ";
+    opacity: 0.45;
+}
+.eyebrow::after {
+    content: " ]";
+    opacity: 0.45;
+}
+
+/* ===== Botão primário do hero — clonado literalmente de .btn--primary da
+   página antiga (gradiente + shadow exatos, incl. estado hover). Nota: este
+   é o glow difuso que uma correção anterior havia rejeitado como "amador" —
+   mantido aqui por instrução explícita de paridade 1:1 com a página antiga. ===== */
+.btn-primary-glow {
+    background: linear-gradient(135deg, var(--ember) 0%, #c55f28 100%);
+    box-shadow: 0 8px 28px rgba(217, 117, 67, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn-primary-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(217, 117, 67, 0.5);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    }
+  html {
+    @apply font-sans;
+    }
+}
+
+/* ===== Janela reveal do hero — mobile e reduced-motion sempre totalmente
+   revelada (sem animação de clip-path). CSS puro, não JS: um branch de JSX
+   condicionado a hook client-only quebra a hidratação (ver useReducedMotion
+   no DetailCarousel/PoweredBy/RevealWindow — histórico de bug já corrigido). */
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .reveal-window-clip {
+    clip-path: inset(0% 0% 0% 0% round 24px) !important;
+  }
+  .reveal-panel {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ===== Reduced motion — backstop global (efeitos motion.dev/GSAP também checam
+   useReducedMotion()/gsap.matchMedia() no próprio componente; isto é a rede de
+   segurança em CSS puro, portada de Pagina/src/style.css ~1120-1140) ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

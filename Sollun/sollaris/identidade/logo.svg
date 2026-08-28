@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44" fill="none" role="img" aria-label="Sollun">
+  <title>Sollun</title>
+  <!-- Sol -->
+  <circle cx="16" cy="25" r="12" fill="#D97543" opacity="0.9"/>
+  <!-- Lua: corpo escuro + anel -->
+  <circle cx="27" cy="19" r="11" fill="#0d0c1c"/>
+  <circle cx="27" cy="19" r="10" fill="#101e26"/>
+  <circle cx="27" cy="19" r="10.5" fill="none" stroke="#7DD3D8" stroke-width="1" opacity="0.75"/>
+</svg>

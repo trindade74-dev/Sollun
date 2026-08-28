@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0A14" />
+  <title>Sollun — Atendimento no WhatsApp que nunca dorme</title>
+  <meta name="description"
+    content="Sollun automatiza o atendimento no WhatsApp da sua PME, 24/7, com tudo configurado pela nossa equipe. Não perca mais nenhum cliente por demora na resposta." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#hero" aria-label="Sollun — início">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sol (sun) -->
+            <circle cx="16" cy="25" r="12" fill="#D97543" opacity="0.9" />
+            <!-- Lua (moon) — dark body + ion ring -->
+            <circle cx="27" cy="19" r="11" fill="#0d0c1c" />
+            <circle cx="27" cy="19" r="10" fill="#101e26" />
+            <circle cx="27" cy="19" r="10.5" fill="none" stroke="#7DD3D8" stroke-width="1" opacity="0.75" />
+          </svg>
+        </span>
+        <span class="brand__word">sollun<span class="brand__dots" aria-hidden="true"></span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a href="#problema">Problema</a>
+        <a href="#produto">Produto</a>
+        <a href="/demo.html">Demo</a>
+        <a href="#faq">FAQ</a>
+        <a href="/ajuda.html">Central de Ajuda</a>
+        <a class="btn btn--primary nav__cta" href="#lista">Entrar na lista</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__dots hero__dots--far" aria-hidden="true" data-parallax data-depth="6"></div>
+      <div class="hero__dots hero__dots--mid" aria-hidden="true" data-parallax data-depth="22"></div>
+      <div class="hero__dots hero__dots--near" aria-hidden="true" data-parallax data-depth="44"></div>
+      <div class="hero__glow" aria-hidden="true" data-parallax data-depth="20"></div>
+      <div class="hero__rings" aria-hidden="true" data-parallax data-depth="52">
+        <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" width="800" height="800">
+          <circle cx="400" cy="400" r="140" fill="none" stroke="#EBC9A0" stroke-width="1" opacity="0.05" />
+          <circle cx="400" cy="400" r="230" fill="none" stroke="#7DD3D8" stroke-width="1" opacity="0.06" />
+          <circle cx="400" cy="400" r="318" fill="none" stroke="#EBC9A0" stroke-width="1" opacity="0.04" />
+          <circle cx="400" cy="400" r="395" fill="none" stroke="#D97543" stroke-width="1.5" opacity="0.14" />
+        </svg>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <span class="eyebrow">Automação de WhatsApp · feito para você</span>
+          <h1 class="hero__title">
+            Seu atendimento no WhatsApp que <span class="grad">nunca dorme</span>.
+          </h1>
+          <p class="hero__sub">
+            A Sollun responde seus clientes automaticamente, dia e noite, sem fila e sem esforço da sua parte.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#lista">Quero acesso antecipado</a>
+            <a class="btn btn--ghost btn--lg" href="demo.html">Ver como funciona</a>
+          </div>
+          <ul class="hero__badges">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+              Feito para você
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              Disponível 24/7
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                <line x1="7" y1="7" x2="7.01" y2="7" />
+              </svg>
+              Preço de PME
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container hero__showcase">
+        <div class="hero__visual reveal" data-parallax data-depth="16">
+          <div class="chat-desktop">
+            <!-- Sidebar de contatos -->
+            <div class="chat-desktop__sidebar">
+              <div class="chat-desktop__search">
+                <input type="text" placeholder="Pesquisar..." aria-label="Pesquisar contatos">
+              </div>
+              <div class="chat-desktop__contacts">
+                <div class="contact-item is-active" data-contact="sollun">
+                  <div class="contact-item__avatar">S</div>
+                  <div class="contact-item__info">
+                    <p class="contact-item__name">Sollun</p>
+                    <p class="contact-item__preview">Use Sollun</p>
+                  </div>
+                </div>
+                <div class="contact-item" data-contact="restaurante">
+                  <div class="contact-item__avatar">R</div>
+                  <div class="contact-item__info">
+                    <p class="contact-item__name">Restaurante Bella Vista</p>
+                    <p class="contact-item__preview">Seu pedido está pronto!</p>
+                  </div>
+                </div>
+                <div class="contact-item" data-contact="clinica">
+                  <div class="contact-item__avatar">C</div>
+                  <div class="contact-item__info">
+                    <p class="contact-item__name">Clínica Saúde Total</p>
+                    <p class="contact-item__preview">Agende sua consulta online</p>
+                  </div>
+                </div>
+                <div class="contact-item" data-contact="ecommerce">
+                  <div class="contact-item__avatar">E</div>
+                  <div class="contact-item__info">
+                    <p class="contact-item__name">E-commerce ModaFácil</p>
+                    <p class="contact-item__preview">Seu pedido chegou!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Chat -->
+            <div class="chat-desktop__chat chat">
+              <div class="chat__header">
+                <span class="chat__avatar">S</span>
+                <div>
+                  <strong>Sollun</strong>
+                  <small>online · responde na hora</small>
+                </div>
+              </div>
+              <div class="chat__body" id="chatBody"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Logos / prova social ===== -->
+    <section class="strip">
+      <div class="container strip__inner">
+        <span>Feito para quem vive de WhatsApp:</span>
+        <div class="strip__tags">
+          <span>Restaurantes</span>
+          <span>Clínicas</span>
+          <span>Salões</span>
+          <span>E-commerce</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Problema ===== -->
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="section__head-content">
+            <div>
+              <span class="eyebrow">O problema</span>
+              <h2>Cada mensagem sem resposta é um cliente que vai pro concorrente.</h2>
+              <p class="section__lead">
+                No Brasil, o WhatsApp é o balcão principal. Mas responder manualmente 24 horas por
+                dia é impossível — e a demora custa caro.
+              </p>
+            </div>
+            <canvas id="solLuaCanvas" class="section__canvas"></canvas>
+          </div>
+        </div>
+        <div class="stats reveal">
+          <div class="stat">
+            <strong data-count="60">0</strong><span class="stat__unit">%</span>
+            <p>dos consumidores desistem se não recebem resposta rápida.</p>
+          </div>
+          <div class="stat">
+            <strong data-count="24">0</strong><span class="stat__unit">/7</span>
+            <p>é quando seus clientes mandam mensagem — inclusive fora do horário.</p>
+          </div>
+          <div class="stat">
+            <strong data-count="5">0</strong><span class="stat__unit">min</span>
+            <p>é o tempo médio que define se você ganha ou perde a venda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Produto / diferenciais ===== -->
+    <section class="section section--alt" id="produto">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">A solução</span>
+          <h2>Um atendente automático que trabalha enquanto você descansa.</h2>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d97543" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+            </div>
+            <h3>Feito para você</h3>
+            <p>Nossa equipe estrutura todo o atendimento. Você aprova e a Sollun entra em operação.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d97543" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3>Disponível 24/7</h3>
+            <p>Sol ou lua, a Sollun responde. Seus clientes nunca ficam no vácuo.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d97543" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                <line x1="7" y1="7" x2="7.01" y2="7" />
+              </svg>
+            </div>
+            <h3>Preço acessível</h3>
+            <p>Pensada para o bolso da pequena empresa, não para o orçamento de grandes corporações.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d97543" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <h3>Modelos prontos</h3>
+            <p>Templates criados para as dores reais de quem atende muito — prontos e configurados para o seu negócio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Setores ===== -->
+    <section class="section" id="setores">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Para quem vive de WhatsApp</span>
+          <h2>Se o seu cliente manda mensagem, a Sollun atende.</h2>
+          <p class="section__lead">Seja qual for o segmento — se o WhatsApp é o seu canal de atendimento, a Sollun
+            automatiza para você.</p>
+        </div>
+        <div class="sectors">
+          <article class="sector reveal">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3d8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                <path d="M7 2v20" />
+                <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7" />
+              </svg>
+              Alimentação
+            </h3>
+            <p>Restaurantes, lanchonetes e delivery confirmam pedidos e reservas enquanto você cuida do salão.</p>
+          </article>
+          <article class="sector reveal">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3d8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+              Saúde & bem-estar
+            </h3>
+            <p>Clínicas, consultórios e spas agendam, lembram e respondem dúvidas sem parar o atendimento.</p>
+          </article>
+          <article class="sector reveal">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3d8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="6" cy="6" r="3" />
+                <circle cx="6" cy="18" r="3" />
+                <line x1="20" y1="4" x2="8.12" y2="15.88" />
+                <line x1="14.47" y1="14.48" x2="20" y2="20" />
+                <line x1="8.12" y1="8.12" x2="12" y2="12" />
+              </svg>
+              Beleza & estética
+            </h3>
+            <p>Salões, barbearias e ateliês enchem a agenda e reduzem faltas sem parar a tesoura.</p>
+          </article>
+          <article class="sector reveal">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3d8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+              Varejo & e-commerce
+            </h3>
+            <p>Lojas físicas e online respondem status, recuperam carrinhos e fecham vendas no chat.</p>
+          </article>
+          <article class="sector reveal">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3d8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                <path d="M12 12v4" />
+                <path d="M8 14h8" />
+              </svg>
+              Serviços & consultoria
+            </h3>
+            <p>Técnicos, advogados e contadores qualificam leads e agendam reuniões automaticamente.</p>
+          </article>
+          <article class="sector reveal">
+            <h3>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7dd3d8" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+              Educação & cursos
+            </h3>
+            <p>Escolas, professores e autoescolas matriculam, lembram e tiram dúvidas sem esforço manual.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Como funciona ===== -->
+    <section class="section section--alt" id="como-funciona">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Do zero ao atendimento automático em 3 passos.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Nos conte seu problema</h3>
+            <p>Você explica como seu atendimento funciona hoje e onde trava. A gente entende o negócio antes de qualquer
+              configuração.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">2</span>
+            <h3>Nós configuramos para você</h3>
+            <p>Nossa equipe monta os fluxos de atendimento com base no seu negócio. Você só revisa e aprova.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">3</span>
+            <h3>Deixe a Sollun atender</h3>
+            <p>Ela responde sozinha, dia e noite, e te avisa quando precisa de você.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="eyebrow">Dúvidas</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq" id="faqList">
+          <details class="faq__item reveal">
+            <summary>Preciso saber programar?</summary>
+            <p>Não. Nossa equipe cuida de toda a configuração. Se você usa WhatsApp, já tem o suficiente.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Funciona no meu WhatsApp atual?</summary>
+            <p>Sim, a ideia é conectar ao número que seu negócio já usa, sem trocar de chip.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Quanto vai custar?</summary>
+            <p>O posicionamento é de preço acessível para PMEs. Entre na lista para receber os planos em primeira mão.
+            </p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Quando estará disponível?</summary>
+            <p>Estamos em fase de pré-lançamento. Quem entra na lista de espera tem acesso antecipado.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA / Lista de espera ===== -->
+    <section class="cta" id="lista">
+      <div class="container cta__inner reveal">
+        <h2>Garanta seu lugar no acesso antecipado.</h2>
+        <p>Deixe seu e-mail e seja um dos primeiros a automatizar o atendimento com a Sollun.</p>
+        <form class="waitlist" id="waitlistForm" novalidate>
+          <div class="waitlist__row">
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" required
+              aria-label="Seu e-mail" />
+            <button class="btn btn--primary btn--lg" type="submit">Entrar na lista</button>
+          </div>
+          <p class="waitlist__msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__pillars">
+      <div class="container footer__pillars-inner">
+        <span><strong>24/7</strong> <em>sol e lua — nunca para</em></span>
+        <span class="footer__pill-divider" aria-hidden="true">|</span>
+        <span><strong>INSTANT</strong> <em>resposta em segundos</em></span>
+        <span class="footer__pill-divider" aria-hidden="true">|</span>
+        <span><strong>MINIMAL</strong> <em>sem esforço, sem dor</em></span>
+      </div>
+    </div>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__word">sollun</span>
+        <p>Atendimento no WhatsApp que nunca dorme. Sol e lua, sempre online.</p>
+      </div>
+      <div class="footer__meta">
+        <a href="#produto">Produto</a>
+        <a href="#setores">Setores</a>
+        <a href="#faq">FAQ</a>
+        <span>© <span id="year"></span> Sollun</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
