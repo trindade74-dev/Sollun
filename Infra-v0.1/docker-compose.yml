@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: sollun-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sollun
+      POSTGRES_PASSWORD: sollun_dev
+      POSTGRES_DB: sollun
+    ports:
+      - "5432:5432"
+    volumes:
+      - sollun_pgdata:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sollun -d sollun"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  sollun_pgdata:
