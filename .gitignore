@@ -9,6 +9,11 @@ dist/
 build/
 .next/
 out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Generated agent output
+agent/output/
 
 # Environment & credentials
 .env
